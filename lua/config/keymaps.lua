@@ -44,9 +44,10 @@ keymap("n", "<leader>nh", ":nohl<CR>", { desc = "Clear Search Highlight" })
 keymap("n", "gcO", "O<esc>Vcx<esc><cmd>normal gcc<CR>fxa<bs>", { desc = "Add Comment Above" })
 keymap("n", "gco", "o<esc>Vcx<esc><cmd>normal gcc<CR>fxa<bs>", { desc = "Add Comment Below" })
 
+--
 -- Quick comment/uncomment with <leader>/
-keymap("n", "<leader>/", "gcc", { desc = "Toggle Comment (Line)", remap = true })
-keymap("v", "<leader>/", "gc", { desc = "Toggle Comment (Selection)", remap = true })
+keymap("n", "<leader>c", "gcc", { desc = "Toggle Comment (Line)", remap = true })
+keymap("v", "<leader>c", "gc", { desc = "Toggle Comment (Selection)", remap = true })
 
 -- New windows
 keymap("n", "te", ":tabedit")

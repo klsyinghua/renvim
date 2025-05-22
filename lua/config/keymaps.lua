@@ -6,6 +6,10 @@ vim.g.mapleader = " "
 
 local keymap = vim.keymap.set
 
+-- Clear highlights on search when pressing <Esc> in normal mode
+--  See `:help hlsearch`
+vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
+
 -- ---------- Insert Mode ---------- ---
 -- Save file with Ctrl+s in multiple modes
 keymap({ "i", "x", "n", "s" }, "<C-s>", "<cmd>w<CR><esc>", { desc = "Save File" })
@@ -36,10 +40,6 @@ keymap("n", "<S-h>", "<cmd>bprevious<CR>", { desc = "Previous Buffer" })
 keymap("n", "<leader>|", "<C-w>v", { desc = "Split Window Horizontally" })
 keymap("n", "<leader>-", "<C-w>s", { desc = "Split Window Vertically" })
 
--- ---------- Normal Mode ---------- ---
--- Clear search highlight
-keymap("n", "<leader>nh", ":nohl<CR>", { desc = "Clear Search Highlight" })
-
 -- Commenting
 keymap("n", "gcO", "O<esc>Vcx<esc><cmd>normal gcc<CR>fxa<bs>", { desc = "Add Comment Above" })
 keymap("n", "gco", "o<esc>Vcx<esc><cmd>normal gcc<CR>fxa<bs>", { desc = "Add Comment Below" })
@@ -47,6 +47,7 @@ keymap("n", "gco", "o<esc>Vcx<esc><cmd>normal gcc<CR>fxa<bs>", { desc = "Add Com
 --
 -- Quick comment/uncomment with <leader>/
 keymap("n", "<leader>c", "gcc", { desc = "Toggle Comment (Line)", remap = true })
+
 keymap("v", "<leader>c", "gc", { desc = "Toggle Comment (Selection)", remap = true })
 
 -- New windows

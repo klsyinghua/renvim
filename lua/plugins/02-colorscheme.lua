@@ -4,13 +4,13 @@ return {
 		name = "catppuccin",
 		lazy = false, -- 立即加载
 		priority = 1000, -- 高优先级
-		-- enabled = false,
+		enabled = false,
 		opts = {
 			integrations = { blink_cmp = true },
 		},
 		config = function()
 			require("catppuccin").setup({
-				transparent_background = true, -- 透明背景
+				transparent_background = false, -- 透明背景
 			})
 			vim.cmd("colorscheme catppuccin")
 		end,
@@ -29,6 +29,17 @@ return {
 		config = function()
 			-- 设置颜色主题
 			vim.cmd("colorscheme solarized-osaka")
+		end,
+	},
+
+	{
+		"folke/tokyonight.nvim",
+		lazy = false,
+		priority = 1000,
+		opts = {},
+		config = function()
+			-- 设置颜色主题
+			vim.cmd("colorscheme tokyonight")
 		end,
 	},
 }

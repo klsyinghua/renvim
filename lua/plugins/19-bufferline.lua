@@ -12,7 +12,7 @@ return {
 			show_buffer_close_icons = true, -- 显示关闭按钮
 			show_close_icon = false, -- 不显示全局关闭按钮（避免误操作）
 			color_icons = true, -- 图标使用主题颜色
-			separator_style = "thin", -- 分隔符样式（可选：slant, thick, thin）
+			separator_style = "thick", -- 分隔符样式（可选：slant, thick, thin）
 
 			-- 诊断信息（与 LSP 集成）
 			diagnostics = "nvim_lsp", -- 显示 LSP 诊断信息（错误、警告等）

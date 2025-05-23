@@ -1,32 +1,22 @@
--- autopairs
--- https://github.com/windwp/nvim-autopairs
---
+-- lazy.nvim 配置示例
 return {
-	"windwp/nvim-autopairs",
-	event = "InsertEnter",
-	-- Optional dependency
-	dependencies = { "hrsh7th/nvim-cmp" },
-	config = function()
-		require("nvim-autopairs").setup({
-			disable_in_macro = true, -- disable when recording or executing a macro
-			disable_in_visualblock = false, -- disable when insert after visual block mode
-			disable_in_replace_mode = true,
-			ignored_next_char = [=[[%w%%%'%[%"%.%`%$]]=],
-			enable_moveright = true,
-			enable_afterquote = true, -- add bracket pairs after quote
-			enable_check_bracket_line = true, --- check bracket in same line
-			enable_bracket_in_quote = true, --
-			enable_abbr = false, -- trigger abbreviation
-			break_undo = true, -- switch for basic rule break undo sequence
-			check_ts = false,
-			map_cr = true,
-			map_bs = true, -- map the <BS> key
-			map_c_h = false, -- Map the <C-h> key to delete a pair
-			map_c_w = false, -- map <c-w> to delete a pair if possible
-		})
-		local cmp_autopairs = require("nvim-autopairs.completion.cmp")
-		-- If you want to automatically add `(` after selecting a function or method
-		local cmp = require("cmp")
-		cmp.event:on("confirm_done", cmp_autopairs.on_confirm_done())
-	end,
+	-- ... 其他插件 ...
+
+	-- nvim-autopairs 插件配置
+	{
+		"windwp/nvim-autopairs",
+		-- 默认情况下，nvim-autopairs 已经足够智能，无需额外配置
+		-- 如果你想启用一些高级功能，例如在特定文件类型中禁用，或者自定义配对规则，
+		-- 才需要添加 config 函数
+		config = function()
+			require("nvim-autopairs").setup({
+				-- 默认配置通常就很好用，以下是一些示例选项：
+				-- disable_filetype = { "TelescopePrompt", "vim" }, -- 在这些文件类型中禁用
+				-- check_ts = true, -- 检查treesitter节点，避免在注释或字符串中自动配对
+				-- map_bs = true, -- 映射退格键，删除配对字符
+				-- map_c_h = false, -- 禁用 Ctrl-h 映射
+			})
+		end,
+	},
+	-- ... 其他插件，包括你的 lspconfig 配置 ...
 }

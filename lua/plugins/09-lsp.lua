@@ -20,9 +20,10 @@ local function create_lsp_keymaps(bufnr)
 		vim.keymap.set(mode, keys, func, { buffer = bufnr, desc = "LSP: " .. desc })
 	end
 
-	map("gd", require("fzf-lua").lsp_definitions, "[G]oto [D]efinition")
-	map("gr", require("fzf-lua").lsp_references, "[G]oto [R]eferences")
-	map("gI", require("fzf-lua").lsp_implementations, "[G]oto [I]mplementation")
+	map("gd", require("fzf-lua").lsp_definitions, "[G]oto [D]efinition | 查看定义")
+	--  查看引用
+	map("gr", require("fzf-lua").lsp_references, "[G]oto [R]eferences | 查看引用")
+	map("gI", require("fzf-lua").lsp_implementations, "[G]oto [I]mplementation | 跳转实现 ")
 	map("<leader>D", require("fzf-lua").lsp_typedefs, "Type [D]efinition")
 	map("<leader>ds", require("fzf-lua").lsp_document_symbols, "[D]ocument [S]ymbols")
 	map("<leader>ws", require("fzf-lua").lsp_live_workspace_symbols, "[W]orkspace [S]ymbols")
@@ -135,6 +136,8 @@ local mason_tools = {
 	"stylua", -- Used to format Lua code
 	"prettierd", -- Used to format javascript and typescript code
 	-- gopls, pyright, bashls 已经包含在 lsp_servers 的键中，无需重复
+	"gofumpt",
+	"goimports",
 }
 
 M.config = function()

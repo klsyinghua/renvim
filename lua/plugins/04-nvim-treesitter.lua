@@ -24,6 +24,5 @@ return {
 		highlight = {
 			enable = true,
 		},
-		indent = { enable = true, disable = { "ruby" } },
 	},
 }

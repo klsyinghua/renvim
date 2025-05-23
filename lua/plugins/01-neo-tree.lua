@@ -1,3 +1,6 @@
+if true then
+	return {}
+end
 local map = vim.keymap.set
 
 return {
@@ -16,15 +19,15 @@ return {
 				enable_git_status = true, -- 启用 Git 状态显示
 				enable_diagnostics = true, -- 启用诊断信息
 				window = {
-					position = "float", -- 设置为浮动窗口
-					popup = {
-						size = {
-							height = 30, -- 窗口高度 80
-							width = 60, -- 窗口宽度 80
-						},
-						position = "50%", -- 居中显示
-						border = "single", -- 边框样式
-					},
+					position = "left", -- 设置为浮动窗口
+					-- popup = {
+					-- 	size = {
+					-- 		height = 30, -- 窗口高度 80
+					-- 		width = 60, -- 窗口宽度 80
+					-- 	},
+					-- 	position = "50%", -- 居中显示
+					-- 	border = "single", -- 边框样式
+					-- },
 				},
 				filesystem = {
 					follow_current_file = {

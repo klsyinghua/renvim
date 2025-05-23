@@ -36,7 +36,10 @@ return {
 
 			-- (Default) Only show the documentation popup when manually triggered
 			completion = {
-				documentation = { auto_show = false },
+				documentation = {
+					auto_show = true, -- 自动显示文档
+					max_height = 20,
+				},
 				menu = {
 					scrollbar = false,
 					draw = {

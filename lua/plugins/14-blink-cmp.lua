@@ -2,7 +2,7 @@ return {
 	{
 		"saghen/blink.cmp",
 		-- optional: provides snippets for the snippet source
-		dependencies = { "rafamadriz/friendly-snippets" },
+		dependencies = { "nvim-tree/nvim-web-devicons", "rafamadriz/friendly-snippets" },
 
 		-- use a release tag to download pre-built binaries
 		version = "1.*",
@@ -37,7 +37,7 @@ return {
 			appearance = {
 				-- 'mono' (default) for 'Nerd Font Mono' or 'normal' for 'Nerd Font'
 				-- Adjusts spacing to ensure icons are aligned
-				nerd_font_variant = "mono",
+				nerd_font_variant = "hack",
 			},
 
 			-- (Default) Only show the documentation popup when manually triggered
@@ -49,11 +49,15 @@ return {
 					scrollbar = false,
 					draw = {
 						columns = {
-							{ "kind_icon" },
-							{ "label", "label_description", gap = 1 },
-							{ "kind", gap = 1 },
-							{ "label_description", gap = 1 },
-							{ "source_name", gap = 1 },
+							{ "kind_icon", width = { min = 2 } },
+							{ "label", width = { fill = true } },
+							{ "kind", width = { min = 10 } },
+							{ "source_name", width = { min = 12 } },
+							-- { "kind_icon" },
+							-- { "label", "label_description", gap = 1 },
+							-- { "kind", gap = 1 },
+							-- { "label_description", gap = 1 },
+							-- { "source_name", gap = 1 },
 						},
 						components = {
 							kind_icon = {
@@ -61,19 +65,31 @@ return {
 								width = { fill = true },
 								text = function(ctx)
 									local kind_icons = {
-										Function = "λ", -- Lambda symbol for functions
-										Method = "∂", -- Lambda symbol for methods
-										Field = "󰀫", -- Lambda symbol for methods
-										Variable = "󰀫", -- Lambda symbol for methods
-										Property = "󰀫", -- Lambda symbol for methods
-										Keyword = "k", -- Lambda symbol for methods
-										Struct = "Π", -- Lambda symbol for methods
-										Enum = "τ", -- Lambda symbol for methods
-										EnumMember = "τ", -- Lambda symbol for methods
-										Snippet = "⊂",
-										Text = "τ",
-										Module = "⌠",
-										Constructor = "∑",
+										Text = "",
+										Method = "󰆧",
+										Function = "󰊕",
+										Constructor = "",
+										Field = "󰇽",
+										Variable = "󰂡",
+										Class = "󰠱",
+										Interface = "",
+										Module = "",
+										Property = "󰜢",
+										Unit = "",
+										Value = "󰎠",
+										Enum = "",
+										Keyword = "󰌋",
+										Snippet = "",
+										Color = "󰏘",
+										File = "󰈙",
+										Reference = "",
+										Folder = "󰉋",
+										EnumMember = "",
+										Constant = "󰏿",
+										Struct = "",
+										Event = "",
+										Operator = "󰆕",
+										TypeParameter = "󰅲",
 									}
 
 									local icon = kind_icons[ctx.kind]
@@ -81,6 +97,16 @@ return {
 										icon = ctx.kind_icon
 									end
 									return icon
+								end,
+							},
+							label = {
+								hl = function(ctx)
+									return ctx.is_selected and "CmpItemAbbrMatch" or "CmpItemAbbr"
+								end,
+							},
+							kind = {
+								hl = function(ctx)
+									return "CmpItemKind" .. ctx.kind
 								end,
 							},
 						},

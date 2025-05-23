@@ -15,6 +15,7 @@ vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 keymap({ "i", "x", "n", "s" }, "<C-s>", "<cmd>w<CR><esc>", { desc = "Save File" })
 
 -- ---------- Window Navigation ---------- ---
+--
 -- Move to window using Ctrl + hjkl keys
 keymap("n", "<C-h>", "<C-w>h", { desc = "Go to Left Window", remap = true })
 keymap("n", "<C-j>", "<C-w>j", { desc = "Go to Lower Window", remap = true })
@@ -23,6 +24,7 @@ keymap("n", "<C-l>", "<C-w>l", { desc = "Go to Right Window", remap = true })
 
 -- NOTE:  Line Movement
 --        Move line up/down in Normal and Visual modes
+--
 keymap("n", "<A-j>", "<cmd>execute 'move .+' . v:count1<CR>==", { desc = "Move Line Down" })
 keymap("n", "<A-k>", "<cmd>execute 'move .-' . (v:count1 + 1)<CR>==", { desc = "Move Line Up" })
 keymap("v", "<A-j>", ":<C-u>execute \"'<,'>move '>+\" . v:count1<CR>gv=gv", { desc = "Move Selection Down" })
@@ -39,10 +41,6 @@ keymap("n", "<S-h>", "<cmd>bprevious<CR>", { desc = "Previous Buffer" })
 -- Split windows with leader key
 keymap("n", "<leader>|", "<C-w>v", { desc = "Split Window Horizontally" })
 keymap("n", "<leader>-", "<C-w>s", { desc = "Split Window Vertically" })
-
---NOTE:  Commenting
-keymap("n", "gcO", "O<esc>Vcx<esc><cmd>normal gcc<CR>fxa<bs>", { desc = "Add Comment Above" })
-keymap("n", "gco", "o<esc>Vcx<esc><cmd>normal gcc<CR>fxa<bs>", { desc = "Add Comment Below" })
 
 -- New windows
 keymap("n", "te", ":tabedit ")

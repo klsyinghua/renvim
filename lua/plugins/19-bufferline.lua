@@ -44,6 +44,12 @@ return {
 					text_align = "center",
 					separator = true,
 				},
+				{
+					filetype = "Avante", -- 替换为实际的 filetype
+					text = "Avante AI",
+					text_align = "center",
+					separator = true,
+				},
 			},
 
 			-- 自定义高亮（与主题集成）
@@ -69,8 +75,6 @@ return {
 			mappings = true, -- 启用默认快捷键（如 <leader>1, <leader>2 切换缓冲区）
 		},
 	},
-	-- 事件触发，确保 bufferline 在启动时加载
-	event = { "BufReadPost", "BufNewFile" },
 	-- 配置初始化函数，添加自定义快捷键
 	config = function(_, opts)
 		require("bufferline").setup(opts)

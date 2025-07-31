@@ -8,7 +8,7 @@
 - [x] plugins
 
 ## Plugins config
-- [theme](git@github.com:uZer/pywal16.nvim.git)使用pywal16的配色
+- [theme](https://github.com/uZer/pywal16.nvim)pywal16的配色
 - [mini.nvim](https://github.com/echasnovski/mini.hipatterns) 突出显示文本中的模式
 - [git.nvim](https://github.com/dinhhuy258/git.nvim) git.nvim 是用 Lua 编写的插件 vim-fugitive 的简单克隆。
 - [neogen](https://github.com/danymat/neogen)一键创建注释，并将光标跳转到插入的注释中

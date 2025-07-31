@@ -10,6 +10,19 @@ local keymap = vim.keymap.set
 --  See `:help hlsearch`
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 
+-- Do things without affecting the registers
+keymap("n", "x", '"_x')
+keymap("n", "<Leader>p", '"0p')
+keymap("n", "<Leader>P", '"0P')
+keymap("v", "<Leader>p", '"0p')
+keymap("n", "<Leader>c", '"_c')
+keymap("n", "<Leader>C", '"_C')
+keymap("v", "<Leader>c", '"_c')
+keymap("v", "<Leader>C", '"_C')
+keymap("n", "<Leader>d", '"_d')
+keymap("n", "<Leader>D", '"_D')
+keymap("v", "<Leader>d", '"_d')
+keymap("v", "<Leader>D", '"_D')
 -- ---------- Insert Mode ---------- ---
 -- Save file with Ctrl+s in multiple modes
 keymap({ "i", "x", "n", "s" }, "<C-s>", "<cmd>w<CR><esc>", { desc = "Save File" })

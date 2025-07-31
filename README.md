@@ -21,8 +21,8 @@
 - [x] [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
 - [x] [conform.nvim](https://github.com/stevearc/conform.nvim)适用于 Neovim 的轻量级但功能强大的格式化程序插件
 
-- [][nvim-colorizer](https://github.com/norcalli/nvim-colorizer.lua) 颜色
-- [][twilight.nvim](https://github.com/folke/twilight.nvim)
+- [ ][nvim-colorizer](https://github.com/norcalli/nvim-colorizer.lua) 颜色
+- [ ][twilight.nvim](https://github.com/folke/twilight.nvim)
 
 # NOTE
 -  在注释行插入新的行，快速跳脱注释:在插入模式下，按 Ctrl-u 删除当前行的自动注释前缀（如果有）

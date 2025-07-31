@@ -17,6 +17,9 @@ return {
 				"query",
 				"vim",
 				"vimdoc",
+				"json",
+				"yaml",
+				"python",
 			},
 		},
 		-- Autoinstall languages that are not installed

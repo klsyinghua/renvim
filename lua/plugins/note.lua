@@ -12,3 +12,4 @@ if true then return {} end
 -- NOTE:
 --  1. 在注释行插入新的行，快速跳脱注释:在插入模式下，按 Ctrl-u 删除当前行的自动注释前缀（如果有）
 --  2. gg
+--  3。在`markerdown`中快速插入`table`

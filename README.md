@@ -1,13 +1,14 @@
+# 配置
 
 ## Basic config
-[x] options
-[x] keymaps
-[x] autocmds 
-
+[ ] options
+[ ] keymaps
+[ ] autocmds 
+[ ] themes
+[ ] plugins
 
 ## Plugins config
-- theme 
-
+- [theme](git@github.com:uZer/pywal16.nvim.git)使用pywal16的配色
 - [mini.nvim](https://github.com/echasnovski/mini.hipatterns) 突出显示文本中的模式
 - [git.nvim](https://github.com/dinhhuy258/git.nvim) git.nvim 是用 Lua 编写的插件 vim-fugitive 的简单克隆。
 - [neogen](https://github.com/danymat/neogen)一键创建注释，并将光标跳转到插入的注释中
@@ -20,10 +21,8 @@
 - [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
 - [conform.nvim](https://github.com/stevearc/conform.nvim)适用于 Neovim 的轻量级但功能强大的格式化程序插件
 
-
-##
-
-
-
-## 
+# NOTE
+-  在注释行插入新的行，快速跳脱注释:在插入模式下，按 Ctrl-u 删除当前行的自动注释前缀（如果有）
+-  gg
+-  在`markerdown`中快速插入`table`
 

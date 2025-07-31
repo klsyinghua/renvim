@@ -1,11 +1,11 @@
 # 配置
 
 ## Basic config
-[ ] options
-[ ] keymaps
-[ ] autocmds 
-[ ] themes
-[ ] plugins
+- [x] options
+- [x] keymaps
+- [x] autocmds 
+- [x] themes
+- [x] plugins
 
 ## Plugins config
 - [theme](git@github.com:uZer/pywal16.nvim.git)使用pywal16的配色

@@ -30,6 +30,20 @@ return {
 			-- },
 		},
 
+		-- 视图配置：自定义 UI 元素的外观和位置
+		views = {
+			-- 将命令弹出窗口 (command palette) 移动到左下角并设置固定宽度
+			cmdline_popup = {
+				position = {
+					row = "100%",
+					col = "100%",
+				},
+				size = {
+					width = 40,
+				},
+			},
+		},
+
 		-- 浮动窗口配置 (如果 messages.view_kind 设置为 "popup")
 		popup_menu = {
 			enabled = true, -- 启用弹出菜单

@@ -53,23 +53,22 @@ return {
 			},
 
 			-- 自定义高亮（与主题集成）
-			-- highlights = {
-			-- 	-- 使用主题的配色（动态适配 tokyonight、catppuccin 等）
-			-- 	fill = {
-			-- 		fg = { attribute = "fg", highlight = "Normal" },
-			-- 		bg = { attribute = "bg", highlight = "StatusLineNC" },
-			-- 	},
-			-- 	background = {
-			-- 		fg = { attribute = "fg", highlight = "Comment" },
-			-- 		bg = { attribute = "bg", highlight = "StatusLine" },
-			-- 	},
-			-- 	buffer_selected = {
-			-- 		fg = { attribute = "fg", highlight = "Normal" },
-			-- 		bg = { attribute = "bg", highlight = "Visual" },
-			-- 		bold = true,
-			-- 		italic = false,
-			-- 	},
-			-- },
+			highlights = {
+				-- 核心：将背景设置为透明
+				fill = {
+					bg = "none",
+				},
+				background = {
+					bg = "none",
+				},
+				-- 你可以根据需要取消注释并自定义其他高亮
+				-- buffer_selected = {
+				-- 	fg = { attribute = "fg", highlight = "Normal" },
+				-- 	bg = { attribute = "bg", highlight = "Visual" },
+				-- 	bold = true,
+				-- 	italic = false,
+				-- },
+			},
 
 			-- 快捷键绑定（在插件内部定义，简化外部配置）
 			mappings = true, -- 启用默认快捷键（如 <leader>1, <leader>2 切换缓冲区）

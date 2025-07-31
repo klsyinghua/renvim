@@ -135,6 +135,7 @@ local lsp_servers = {
 local mason_tools = {
 	"stylua", -- Used to format Lua code
 	"prettierd", -- Used to format javascript and typescript code
+	"shellcheck", -- Used by bashls for diagnostics
 	-- gopls, pyright, bashls 已经包含在 lsp_servers 的键中，无需重复
 	"gofumpt",
 	"goimports",

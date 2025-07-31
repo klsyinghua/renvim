@@ -1,39 +1,53 @@
+-- ~/.config/nvim/lua/plugins/colorscheme.lua
 return {
-	-- {
-	-- 	"craftzdog/solarized-osaka.nvim",
-	-- 	-- enabled = false,
-	-- 	-- lazy = true,
-	-- 	-- priority = 1000,
-	-- 	opts = function()
-	-- 		return {
-	-- 			transparent = true,
-	-- 		}
-	-- 	end,
-	-- 	config = function()
-	-- 		-- 设置颜色主题
-	-- 		vim.cmd("colorscheme solarized-osaka")
-	-- 	end,
-	-- },
+	{
+		"catppuccin/nvim",
+		name = "catppuccin",
+		priority = 1000, -- 确保它最先加载
+		opts = {
+			flavour = "frappe",
+			transparent_background = true,
+			styles = {
+				sidebars = "transparent",
+				floats = "transparent",
+			},
+		},
+	},
 
-	{ -- You can easily change to a different colorscheme.
-		-- Change the name of the colorscheme plugin below, and then
-		-- change the command in the config to whatever the name of that colorscheme is.
-		--
-		-- If you want to see what colorschemes are already installed, you can use `:Telescope colorscheme`.
-		"folke/tokyonight.nvim",
-		priority = 1000, -- Make sure to load this before all the other start plugins.
+	{
+		"ellisonleao/gruvbox.nvim",
+		priority = 1000,
+		opts = {
+			terminal_colors = true,
+			undercurl = true,
+			underline = true,
+			bold = true,
+			italic = {
+				strings = true,
+				emphasis = true,
+				comments = true,
+				operators = false,
+				folds = true,
+			},
+			strikethrough = true,
+			invert_selection = false,
+			invert_signs = false,
+			invert_tabline = false,
+			inverse = true,
+			contrast = "", -- "hard", "soft", or ""
+			palette_overrides = {},
+			overrides = {},
+			dim_inactive = false,
+			transparent_mode = true,
+		},
+	},
+
+	{
+		"uZer/pywal16.nvim",
+		-- for local dev replace with:
+		-- dir = '~/your/path/pywal16.nvim',
 		config = function()
-			---@diagnostic disable-next-line: missing-fields
-			require("tokyonight").setup({
-				styles = {
-					comments = { italic = false }, -- Disable italics in comments
-				},
-			})
-
-			-- Load the colorscheme here.
-			-- Like many other themes, this one has different styles, and you could load
-			-- any other, such as 'tokyonight-storm', 'tokyonight-moon', or 'tokyonight-day'.
-			vim.cmd.colorscheme("tokyonight-night")
+			vim.cmd.colorscheme("pywal16")
 		end,
 	},
 }

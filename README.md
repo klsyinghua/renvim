@@ -1,31 +1,46 @@
-# 配置
+# 配置文档
 
-## Basic config
+## Basic Config
 - [x] options
 - [x] keymaps
-- [x] autocmds 
+- [x] autocmds
 - [x] themes
 - [x] plugins
 
-## Plugins config
-- [x] [theme](https://github.com/uZer/pywal16.nvim): pywal16的配色
-- [x] [mini.nvim](https://github.com/echasnovski/mini.hipatterns): 突出显示文本中的模式
-- [x] [git.nvim](https://github.com/dinhhuy258/git.nvim):  git.nvim 是用 Lua 编写的插件 vim-fugitive 的简单克隆。
-- [x] [neogen](https://github.com/danymat/neogen): 一键创建注释，并将光标跳转到插入的注释中
-- [x] [inc-rename.nvim](https://github.com/smjonas/inc-rename.nvim): 一个小型 Neovim 插件，借助 Neovim 的命令预览功能，提供 LSP 重命名命令和即时视觉反馈。
-- [x] [mini.bracketed](https://github.com/echasnovski/mini.bracketed): 用方括号前进/后退
-- [x] [symbols-outline.nvim](https://github.com/simrat39/symbols-outline.nvim): Neovim 中使用语言服务器协议的符号树状视图。支持所有您喜欢的语言。
-- [x] [nvim-cmp](https://github.com/hrsh7th/nvim-cmp?tab=readme-ov-file#nvim-cmp): 用 Lua 编写的 neovim 补全引擎插件。完成源是从外部存储库安装并“来源”的。
-- [x] [mason](https://github.com/williamboman/mason.nvim): mason.nvim 是一个 Neovim 插件，可让您通过单个界面轻松管理外部编辑器工具
-- [x] [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig) : lsp 配置 
-- [x] [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter): 语法树
-- [x] [conform.nvim](https://github.com/stevearc/conform.nvim): 适用于 Neovim 的轻量级但功能强大的格式化程序插件
+## Plugins Config
 
-- [ ] [nvim-colorizer](https://github.com/norcalli/nvim-colorizer.lua): 颜色
-- [x] [twilight.nvim](https://github.com/folke/twilight.nvim): 背景色配置
+| 插件名称 | 功能简介 | 备注 |
+| -------- | -------- | ---- |
+| [pywal16.nvim](https://github.com/uZer/pywal16.nvim) | pywal16 的配色方案 | 主题 |
+| [mini.nvim](https://github.com/echasnovski/mini.hipatterns) | 高亮文本中的模式 | 文本高亮 |
+| [git.nvim](https://github.com/dinhhuy258/git.nvim) | Vim-fugitive 的 Lua 轻量克隆 | Git 集成 |
+| [neogen](https://github.com/danymat/neogen) | 一键创建注释并跳转光标 | 注释工具 |
+| [inc-rename.nvim](https://github.com/smjonas/inc-rename.nvim) | LSP 重命名命令的即时预览 | 重命名辅助 |
+| [mini.bracketed](https://github.com/echasnovski/mini.bracketed) | 通过方括号快速前进/后退 | 代码导航 |
+| [symbols-outline.nvim](https://github.com/simrat39/symbols-outline.nvim) | LSP 符号树状视图 | 代码结构 |
+| [nvim-cmp](https://github.com/hrsh7th/nvim-cmp) | Lua 编写的补全引擎插件 | 补全系统 |
+| [mason.nvim](https://github.com/williamboman/mason.nvim) | 外部编辑器工具管理 | LSP 管理 |
+| [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig) | LSP 配置工具 | LSP 支持 |
+| [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter) | 语法树高亮 | 语法解析 |
+| [conform.nvim](https://github.com/stevearc/conform.nvim) | 轻量格式化插件 | 代码格式化 |
+| [twilight.nvim](https://github.com/folke/twilight.nvim) | 聚焦当前代码，背景变暗 | 代码聚焦 |
 
-# NOTE
--  在注释行插入新的行，快速跳脱注释:在插入模式下，按 Ctrl-u 删除当前行的自动注释前缀（如果有）
--  gg
--  在`markerdown`中快速插入`table`
+- [ ] [nvim-colorizer.lua](https://github.com/norcalli/nvim-colorizer.lua) — 颜色高亮插件，暂未启用
+
+---
+
+## 使用说明 & 备注
+
+- **快速跳脱注释**  
+  在插入模式下，按 `Ctrl-u` 可删除当前行自动注释前缀（如果存在）。
+
+- **常用命令**  
+  `gg` —— 快速跳转到文件开头。
+
+- **Markdown 插入表格**  
+  快速插入 Markdown 格式的表格结构。
+
+---
+
+如需进一步优化或者补充内容，可以告诉我！
 

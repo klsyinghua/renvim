@@ -3,6 +3,7 @@ return {
 	{
 		"catppuccin/nvim",
 		name = "catppuccin",
+		enabled = false,
 		priority = 1000, -- 确保它最先加载
 		opts = {
 			flavour = "frappe",
@@ -17,6 +18,7 @@ return {
 	{
 		"ellisonleao/gruvbox.nvim",
 		priority = 1000,
+		enabled = false,
 		opts = {
 			terminal_colors = true,
 			undercurl = true,

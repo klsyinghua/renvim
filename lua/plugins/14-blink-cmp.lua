@@ -30,8 +30,8 @@ return {
 				preset = "enter",
 				["<Tab>"] = { "select_next", "snippet_forward", "fallback" },
 				["<S-Tab>"] = { "select_prev", "snippet_backward", "fallback" },
-				-- ["<CR>"] = { "accept", "fallback" },
-				-- ["<C-e>"] = { "hide", "fallback" },
+				["<CR>"] = { "accept", "fallback" },
+				["<C-e>"] = { "hide", "fallback" },
 				--
 				["<C-y>"] = { "select_and_accept" },
 			},

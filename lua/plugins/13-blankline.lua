@@ -1,6 +1,7 @@
 -- Configuring lukas-reineke/indent-blankline.nvim for LazyVim
 return {
 	"lukas-reineke/indent-blankline.nvim",
+	enabled = false,
 	event = { "BufReadPost", "BufNewFile" }, -- Load on buffer read or new file
 	main = "ibl", -- Specify the main module for the plugin
 	opts = {
